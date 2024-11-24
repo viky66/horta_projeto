@@ -1,0 +1,21 @@
+<section class="container">
+    <section class="d-flex justify-content-between mt-4">
+        <h2>Página Cadastro de Plantas</h2>
+        <a href="/planta/create" class="btn btn-primary">Cadastrar nova planta</a>
+    </section>
+</section>
+{{#each dados}}
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">{{this.nome}}</h5>
+                <p class="card-text m-0">ID: {{this.id}}</p>
+                <p class="card-text m-0">Tipo: {{this.tipo}}</p>
+                <p class="card-text m-0">Data do plantio: {{this.data_plantio}}</p>
+                <p class="card-text m-0">Quantidade: {{this.quantidade}}</p>
+            </div>
+        </div>
+    </div>
+{{else}}
+    <p>Nenhuma planta cadastrada ainda.</p>
+{{/each}}
